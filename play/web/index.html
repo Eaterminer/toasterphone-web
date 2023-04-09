@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Toasterphone is fun [Web Player]" />
+		<meta name="author" content="EaterMiner, Is Ant, Tino" />
+		<meta name="robots" content="noindex" />
+		<meta name="googlebot" content="noindex" />
+		<title>Toasterphone</title>
+		<style>
+			body {
+				background-color: #212121; /* default dark mode background color */
+				color: #ffffff; /* default dark mode text color */
+				font-family: "Pixel Arial", Arial, sans-serif;
+				font-size: 18px;
+			}
+
+			/* light mode styles */
+			body.light-mode {
+				background-color: #ffffff; /* light mode background color */
+				color: #000000; /* light mode text color */
+			}
+
+			#top {
+				padding: 20px;
+				text-align: center;
+				color: #8284ff;
+			}
+
+			#top h1 {
+				font-size: 24px;
+				margin-top: 0;
+				margin-bottom: 5px;
+			}
+
+			#top p {
+				font-size: 16px;
+				margin-top: 0;
+			}
+
+			#commands,
+			#info,
+			#settings,
+			#contact {
+				padding: 20px;
+				margin-top: 30px;
+				border-top: 1px solid #8284ff;
+			}
+
+			#commands h2,
+			#info h2,
+			#settings h2,
+			#contact h2 {
+				font-size: 18px;
+				margin-top: 0;
+			}
+
+			#commands ul,
+			#info p,
+			#settings p,
+			#contact p {
+				font-size: 14px;
+				margin-top: 5px;
+			}
+
+			#color-accent {
+				color: #8284ff;
+			}
+			#join {
+				width: 500px;
+				height: 300px;
+				background-color: #8284ff;
+			}
+
+            .centered {
+                position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+
+				margin: auto;
+            }
+		</style>
+		<script>
+			function toggleDarkMode() {
+				var body = document.getElementsByTagName("body")[0]
+				body.classList.toggle("light-mode") // Fixed: Toggle "light-mode" class instead of "dark-mode"
+			}
+		</script>
+	</head>
+	<body class="dark-mode">
+		<div id="join" class="centered">
+			<input id="joincode" placeholder="Enter joincode" /> // hi
+		</div>
+	</body>
+</html>
