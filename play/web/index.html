@@ -67,20 +67,51 @@
 				color: #8284ff;
 			}
 			#join {
-				width: 500px;
-				height: 300px;
+				width: 70vw;
+				height: 70vh;
 				background-color: #8284ff;
+				border-radius: 25px;
 			}
 
-            .centered {
-                position: absolute;
+			#join * {
+				padding: 50px;
+			}
+
+			.centered {
+				position: absolute;
 				top: 0;
 				bottom: 0;
 				left: 0;
+				text-align: center;
 				right: 0;
-
 				margin: auto;
-            }
+			}
+			input {
+				font-size: 130px;
+				width: 60vw;
+				height: 20vh;
+				padding: 10px;
+				color: white;
+				border: 1px solid #8284ff;
+				background-color: gradient(
+					linear,
+					left top,
+					right top,
+					from(#00e1ff),
+					to(#8284ff)
+				);
+			}
+			#joincode {
+				text-align: center;
+				background: rgb(86, 60, 224);
+				border-radius: 150px;
+				position: absolute;
+				top: 200px;				
+				text-transform: uppercase;
+			}
+			.enterjoincodemessage {
+				font-size: 100px;
+			}
 		</style>
 		<script>
 			function toggleDarkMode() {
@@ -91,7 +122,11 @@
 	</head>
 	<body class="dark-mode">
 		<div id="join" class="centered">
-			<input id="joincode" placeholder="Enter joincode" class="centered"/> // hi
+			<div class="enterjoincodemessage">Enter Joincode</div>
+			<input
+				id="joincode"
+				class="centered fancyBackground1"
+			/>
 		</div>
 	</body>
 </html>

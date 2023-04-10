@@ -70,7 +70,8 @@
 			}
 
 			/* Apply rounded corners to all buttons */
-			button {
+			button,
+			a {
 				border-radius: 50px; /* You can adjust the value to control the roundness of the buttons */
 				background-color: #8284ff; /* Set a background color for the buttons */
 				color: #fff; /* Set text color for the buttons */
@@ -78,6 +79,7 @@
 				font-size: 16px; /* Set font size for the buttons */
 				border: none; /* Remove border */
 				cursor: pointer; /* Add cursor pointer for hover effect */
+				text-decoration: none; /* Remove underline */
 				transition: all 0.3s ease; /* Add transition effect for smooth hover */
 			}
 
@@ -86,7 +88,8 @@
 			}
 
 			/* Add hover effect */
-			button:hover {
+			button:hover,
+			a:hover {
 				background-color: rgb(
 					117,
 					75,
@@ -96,12 +99,14 @@
 			}
 
 			/* Add focus effect */
-			button:focus {
+			button:focus,
+			a:focus {
 				outline: none; /* Remove default focus outline */
 				box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.3); /* Add custom focus outline */
 			}
 			/* Add pressed effect */
-			button:active {
+			button:active,
+			a:active {
 				transform: scale(0.95);
 			}
 			.ant {
@@ -109,6 +114,32 @@
 				z-index: 9999;
 				opacity: 0.5;
 				font-size: 10px;
+			}
+			footer {
+				background: black;
+				color: white;
+				padding: 10px;
+				width: 100vw;
+				margin: 0px;
+				position: fixed;
+				bottom: 0;
+				font-size: 16px;
+			}
+
+			footer a {
+				background: transparent;
+				padding: 0px;
+				font-size: 16px;
+			}
+			footer a:hover {
+				background: transparent;
+				padding: 0px;
+				font-size: 16px;
+			}
+
+			body {
+				margin: 0px;
+				padding: 0px;
 			}
 		</style>
 		<script>
@@ -120,14 +151,14 @@
 		<script>
 			function redirectToAnotherPage() {
 				// Redirect to another page
-				window.location.href = "https://ad8c-14-137-30-153.au.ngrok.io/src/web/index.html"; // Replace with the URL of the page you want to redirect to
+				window.location.href =
+					"play/index.html" // Replace with the URL of the page you want to redirect to
 			}
 		</script>
-		
 	</head>
 	<div class="ant" style="bottom: 0; right: 0">ant</div>
 	<script>
-        const antInfestation = false
+		const antInfestation = false
 		if (antInfestation == true) {
 			for (let index = 0; index < 1; index++) {
 				document.body.innerHTML += `<div class="ant" style="top: ${
@@ -144,27 +175,25 @@
 				Toaster Phone!
 			</p>
 		</div>
-		<button onclick="redirectToAnotherPage()">Start/Join Game</button>
-		<div id="commands">
-			<h2>Commands:</h2>
+		<button onclick="redirectToAnotherPage()">Play</button>
+		<div id="modes">
+			<h2>Modes:</h2>
 			<ul>
-				<li>!web - Opens the game website</li>
-				<li>!settings - Adjust game settings</li>
-				<li>!join - Join the game</li>
-				<li>!host - Host a new game</li>
-				<li>!leave - Exit the game</li>
+				<li>How the</li>
+				<li>Change 1 Word</li>
 			</ul>
 		</div>
 		<div id="info">
 			<h2>Info:</h2>
 			<p>
-				Welcome to Toasterphone! This bot allows you to play a fun
-				drawing and guessing game with your friends in Discord. Join the
+				Welcome to Toasterphone! This game is a fun
+				drawing and guessing game with your friends. Join the
 				game, guess the drawing, or host your own game and let others
 				guess your drawing!
 			</p>
 		</div>
-		<div id="contact">
+		<button onclick="toggleDarkMode()">Toggle Color Mode</button>
+		<footer id="contact">
 			<h2>Contact:</h2>
 			<p>
 				If you have any questions or need support, feel free to contact
@@ -182,7 +211,6 @@
 					>discord.gg/ZWccr44WZr</a
 				>
 			</p>
-		</div>
-		<button onclick="toggleDarkMode()">Toggle Color Mode</button>
+		</footer>
 	</body>
 </html>
